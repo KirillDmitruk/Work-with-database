@@ -7,7 +7,7 @@ WHERE ship_country IN ('France', 'Germany', 'Spain');
 SELECT DISTINCT ship_country, ship_city FROM orders
 ORDER BY ship_country, ship_city;
 
--- 3. сколько дней в среднем уходит на доставку товара в Германию (таблица orders, колонки order_date, shipped_date, ship_country)
+-- 3. сколько дней в среднем уходит на доставку товара в Германию (таблица orders, колонки order_date, shipped_date, ship_country).
 SELECT AVG(shipped_date - order_date) FROM orders
 WHERE ship_country IN ('Germany');
 
