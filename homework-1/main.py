@@ -6,7 +6,7 @@ customers = pd.read_csv(customers_file)
 employees = pd.read_csv(employees_file)
 orders = pd.read_csv(orders_file)
 
-with psycopg2.connect(host="localhost", database="north", user="postgres", password="13Keb-09") as conn:
+with psycopg2.connect(host="localhost", database="north", user="postgres", password="password") as conn:
     with conn.cursor() as cursor:
         for customer in customers.itertuples(index=False):
             cursor.execute("INSERT INTO customers VALUES (%s, %s, %s)", customer)
